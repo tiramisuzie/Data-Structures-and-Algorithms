@@ -6,17 +6,20 @@ namespace arrayShift
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
-			int[] myArr = { 2, 4, 6, 8 };
-
-			int[] result = InsertArrayShift(myArr, 5);
-
-			for (int i = 0; i < result.Length; i++)
-			{
-				Console.Write($"{result[i]} ");
-			}
+            ArrayShift();
 		}
 
+        static void ArrayShift()
+        {
+            int[] myArr = { 2, 4, 6, 8 };
+
+            int[] result = InsertArrayShift(myArr, 5);
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                Console.Write($"{result[i]} ");
+            }
+        }
 		/// <summary>
 		/// Add an element to the middle of an array
 		/// </summary>

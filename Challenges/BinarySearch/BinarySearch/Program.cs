@@ -10,8 +10,10 @@ namespace BinarySearch
 
 			int[] lost = { 4, 8, 15, 16, 23, 42 };
 
-			//Console.WriteLine(BinarySearchIterative(lost, 15));
-			Console.WriteLine(BinarySearchRecursive(lost, 15));
+            //Console.WriteLine(BinarySearchIterative(lost, 15));
+            //Console.WriteLine(BinarySearchRecursive(lost, 15));
+            ArrayBinarySearch arrayBinarySearch = new ArrayBinarySearch();
+            Console.WriteLine(arrayBinarySearch.BinarySearch(lost, 2));
 
 		}
 

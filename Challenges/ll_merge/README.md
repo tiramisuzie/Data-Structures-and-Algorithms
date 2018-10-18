@@ -7,5 +7,5 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
  Big O Time = O(n) // Big O Space = O(1)
 	- returning the linked list is the most space efficient
 ## Solution
-![two linked lists](../../assets/Challenge8.PNG)
+![two linked lists](../../assets/Challenge8.jpg)
 

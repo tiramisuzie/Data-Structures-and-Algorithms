@@ -24,7 +24,7 @@ namespace LinkedLists
                 {
                     return current.Value;
                 }
-                current = current.Next;
+                current = current.Next; 
                 counter++;
             }
             

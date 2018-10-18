@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ll_merge
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -21,7 +21,7 @@ namespace ll_merge
             result.Print();
         }
 
-        static LList Merge(LList one, LList two)
+        public static LList Merge(LList one, LList two)
         {
             if (one == null)
             {

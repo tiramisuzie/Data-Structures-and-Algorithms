@@ -2,7 +2,7 @@
 
 namespace ll_merge
 {
-    class LList
+    public class LList
     {
         /// <summary>
 

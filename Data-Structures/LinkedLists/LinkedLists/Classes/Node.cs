@@ -42,6 +42,5 @@ namespace LinkedLists.Classes
         }
        
 
-        }
     }
 }

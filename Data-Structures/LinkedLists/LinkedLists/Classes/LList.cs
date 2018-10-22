@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedLists.Classes
 {
-    class LList
+    public class LList
     {
         /// <summary>
 
@@ -228,6 +228,8 @@ namespace LinkedLists.Classes
                 }
                 Current = Current.Next;
             }
+            Current = Head;
+
         }
     }
 }

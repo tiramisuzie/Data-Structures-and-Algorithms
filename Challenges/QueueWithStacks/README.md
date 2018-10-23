@@ -17,4 +17,4 @@ Dequeue()
 * Time complexity: O(n)
 
 ## Whiteboard Solution
-![Queue with Stacks](/assets/challenge11.JPG)
+![Queue with Stacks](/Challenges/QueueWithStacks/assets/challenge11.jpg)

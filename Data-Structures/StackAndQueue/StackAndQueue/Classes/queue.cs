@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackAndQueue
+namespace StackAndQueue.Classes
 {
     public class Queue
     {

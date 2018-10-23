@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StackAndQueue
+namespace StackAndQueue.Classes
 {
     class Node
     {

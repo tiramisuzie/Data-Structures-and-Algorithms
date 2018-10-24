@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelter.Classes;
+using System;
 
 namespace AnimalShelter
 {
@@ -6,7 +7,46 @@ namespace AnimalShelter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Queue queue = new Queue();
+            queue.Enqueue(new Dog());
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Dog());
+            queue.Enqueue(new Dog());
+            queue.Enqueue(new Dog());
+            Console.WriteLine("Dequeue: " + queue.Dequeue("dog"));
+            Console.WriteLine("Dequeue: " + queue.Dequeue("dog"));
+            Console.WriteLine("Dequeue: " + queue.Dequeue("dog"));
+
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("***********test 3**************");
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Dog());
+            queue.Enqueue(new Dog());
+            queue.Enqueue(new Dog());
+            queue.Enqueue(new Cat());
+            queue.Enqueue(new Cat());
+            Console.WriteLine("Dequeue: " + queue.Dequeue("dog"));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+            Console.WriteLine("Dequeue: " + queue.Dequeue(null));
+
+
         }
     }
 }

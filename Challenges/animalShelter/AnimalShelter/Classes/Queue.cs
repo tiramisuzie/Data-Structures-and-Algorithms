@@ -25,47 +25,52 @@ namespace AnimalShelter.Classes
             }
         }
 
-        public Node Dequeue(string Pref)
+        public Animal Dequeue(string Pref)
         {
+            // Invalid because queue is empty
             if (head == null)
             {
                 throw new InvalidOperationException();
             }
 
-            if (Pref != "dog" && Pref != "cat")
+            // only allow null or dog or cat input
+            if (Pref != "dog" && Pref != "cat" && Pref != null)
             {
                 throw new InvalidOperationException();
             }
 
+            // go with pref logic
             if (Pref != null)
             {
-                Node prev = null;
-                Node curr = head;
+                Node prev = null; // previous pointer
+                Node curr = head; // current pointer
+                // cycle through the queue to find the pref
                 while(curr != null)
                 {
+                    // compare pref and animal.type
                     if (((Animal) curr.Value).type.Equals(Pref))
                     {
                         Node temp = curr;
-                        if (prev != null)
+                        if (prev != null) // patch the node if removed from the middle
                         {
                             prev.Next = curr.Next;
                         }
-                        else
+                        else // when head is the pref
                         {
                             head = head.Next;
                         }
-                        return temp;
+                        return (Animal) temp.Value; // return the animal that matches the pref
                     }
                     prev = curr;
                     curr = curr.Next;
                 }
-                return null;
+                return null; // not found
             }
             else
             {
                 Node temp = head;
                 head = head.Next;
-                return temp;
+                return (Animal) temp.Value; // return any animal because pref wasn't specified
             }
             
         }

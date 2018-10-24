@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace animalShelter.Classes
+namespace AnimalShelter.Classes
 {
     // create Cat class
-    public class Cat
+    public class Cat : Animal
     {
+        public Cat()
+        {
+            // used later for pref in dequeue
+            type = "cat";
+        }
     }
 }

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace animalShelter.Classes
+namespace AnimalShelter.Classes
 {
     // create animal class
-    public class Animal
+    public abstract class Animal
     {
+        // can be dog or cat
+        public string type { get; set; }
     }
 }

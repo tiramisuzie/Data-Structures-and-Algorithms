@@ -118,5 +118,47 @@ namespace XUnitTestProject1
             Assert.Equal(3, llist.Head.Next.Next.Value);
             Assert.Equal(1, llist.Head.Next.Next.Next.Value);
         }
+
+        [Fact]
+        public void ShouldFindNode1()
+        {
+            Node n1 = new Node(1);
+            Node n2 = new Node(2);
+            Node n3 = new Node(3);
+            Node n4 = new Node(4);
+            LList lList = new LList(n1);
+            lList.Add(n2);
+            lList.Add(n3);
+            lList.Add(n4);
+            Assert.Equal(n1, lList.Find(n1));
+        }
+
+        [Fact]
+        public void ShouldFindNode2()
+        {
+            Node n1 = new Node(1);
+            Node n2 = new Node(2);
+            Node n3 = new Node(3);
+            Node n4 = new Node(4);
+            LList lList = new LList(n1);
+            lList.Add(n2);
+            lList.Add(n3);
+            lList.Add(n4);
+            Assert.Equal(n2, lList.Find(n2));
+        }
+
+        [Fact]
+        public void ShouldFindNode3()
+        {
+            Node n1 = new Node(1);
+            Node n2 = new Node(2);
+            Node n3 = new Node(3);
+            Node n4 = new Node(4);
+            LList lList = new LList(n1);
+            lList.Add(n2);
+            lList.Add(n3);
+            lList.Add(n4);
+            Assert.Equal(n4, lList.Find(n4));
+        }
     }
 }

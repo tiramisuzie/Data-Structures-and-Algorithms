@@ -16,4 +16,4 @@ Input	Output
 {(})	FALSE
 
 ## Whiteboard
-![Multi-bracket Validation](/Challenges/QueueWithStacks/assets/challenge13.jpg)
+![Multi-bracket Validation](/Challenges/multiBracketValidation/assets/challenge13.jpg)

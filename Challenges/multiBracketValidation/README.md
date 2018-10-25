@@ -9,9 +9,8 @@ Curly Brackets : {}
 Input	Output
 {}	TRUE
 {}(){}	TRUE
-()[[Extra Characters]]	TRUE
 (){}[[]]	TRUE
-{}{Code}[Fellows](())	TRUE
+
 [({}]	FALSE
 (](	FALSE
 {(})	FALSE

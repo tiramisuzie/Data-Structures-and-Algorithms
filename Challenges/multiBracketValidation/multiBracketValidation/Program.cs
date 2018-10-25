@@ -12,16 +12,21 @@ namespace multiBracketValidation
 
         public static bool MultiBracketValidation(string input)
         {
+            // create a stack for open brackets
             Stack stack = new Stack();
+            // split them up to characters
             char[] characters = input.ToCharArray();
             for(int i = 0; i < characters.Length; i++)
             {
+                // if character is an open bracket and push to stack
                 if (ValidateOpenBracket(characters[i]))
                 {
                     stack.Push(new Node(characters[i]));
                 }
                 else if (ValidateCloseBracket(characters[i]))
                 {
+                    // if character is an close bracket than pop the stack and compare if they are a complete bracket
+                    // return false if not complete bracket
                     try
                     {
                         var openBracket = stack.Pop();
@@ -33,12 +38,12 @@ namespace multiBracketValidation
                             return false;
                         }
                     } catch (InvalidOperationException)
-                    {
+                    { // stack.Pop throw an exception when stack is empty
                         return false;
                     }
                 }
             }
-            return stack.size == 0;
+            return stack.size == 0; // when stack is empty means there isnt any incomplete brackets
         }
 
         public static bool ValidateOpenBracket(char c)

@@ -15,4 +15,4 @@ Dequeue()
 Space complexity: O(1)
 Time complexity: O(n)
 ## Whiteboard
-![whiteboard challenge 11](/assets/challenge11.jpg)
+![whiteboard challenge 11](/Challenges/animalShelter/assets/challenge11.jpg)

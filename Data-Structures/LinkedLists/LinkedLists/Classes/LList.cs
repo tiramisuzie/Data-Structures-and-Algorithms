@@ -8,43 +8,32 @@ namespace LinkedLists.Classes
     {
         /// <summary>
 
-        ///		Always points to the first node in the LL
+        ///	Always points to the first node in the LL
 
         /// </summary>
 
         public Node Head { get; set; }
 
-
-
         /// <summary>
 
-        ///		The node that is used to traverse through the LL
+        ///	The node that is used to traverse through the LL
 
         /// </summary>
 
         public Node Current { get; set; }
 
-
-
         /// <summary>
 
-        ///		LL requires a node at time of creation to be the HEAD
+        ///	LL requires a node at time of creation to be the HEAD
 
         /// </summary>
 
         /// <param name="node">the node that will become the head</param>
 
         public LList(Node node)
-
         {
-
             Head = node;
-
-            Current = node;
-
         }
-
-
 
         /// <summary>
 
@@ -230,6 +219,31 @@ namespace LinkedLists.Classes
             }
             Current = Head;
 
+        }
+      
+        /// <summary>
+        /// Find nodes
+        /// O(n) time. O(1) space.
+        /// return node if found
+        /// else null
+        /// </summary>
+        /// <param name="node"> check if node is in the linkedlist</param>
+
+        public Node Find(Node node)
+        {
+            Current = Head;
+
+            while (Current != null)
+            {
+                if (Current.Value == node.Value)
+                {
+                    return Current;
+                }
+
+                Current = Current.Next;
+            }
+
+            return null;
         }
     }
 }

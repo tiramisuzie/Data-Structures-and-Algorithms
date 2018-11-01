@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", "{6312B078-3D21-48DA-B9C6-2383C6313711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{06B4F58A-4FF8-4005-86FA-888E446DCA36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6312B078-3D21-48DA-B9C6-2383C6313711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6312B078-3D21-48DA-B9C6-2383C6313711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6312B078-3D21-48DA-B9C6-2383C6313711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6312B078-3D21-48DA-B9C6-2383C6313711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B4F58A-4FF8-4005-86FA-888E446DCA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B4F58A-4FF8-4005-86FA-888E446DCA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B4F58A-4FF8-4005-86FA-888E446DCA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B4F58A-4FF8-4005-86FA-888E446DCA36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DBDC967-E81C-4814-A3E5-F18CEF00A1D8}
+	EndGlobalSection
+EndGlobal

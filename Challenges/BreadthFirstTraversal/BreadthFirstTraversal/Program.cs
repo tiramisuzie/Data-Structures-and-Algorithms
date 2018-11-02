@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace BreadthFirstTraversal
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -27,12 +27,16 @@ namespace BreadthFirstTraversal
         /// Breadth-First traversal of a binary tree; print every visited node’s value
         /// </summary>
         /// <param name="tree">The binary tree to be traversed</param>
-        static void BreadthFirst(BinaryTree tree)
+        public static List<int> BreadthFirst(BinaryTree tree)
         {
             Queue<Node> q = new Queue<Node>();
-
+            List<int> result = new List<int>();
             // Return if empty
-            if (tree.Root == null) return;
+            if (tree.Root == null)
+            {
+                return result;
+            }
+
 
             q.Enqueue(tree.Root);
 
@@ -40,7 +44,7 @@ namespace BreadthFirstTraversal
             {
                 Node currentNode = q.Peek();
                 Console.WriteLine(currentNode.Value);
-
+                result.Add(currentNode.Value);
                 if (currentNode.Left != null)
                 {
                     q.Enqueue(currentNode.Left);
@@ -53,6 +57,7 @@ namespace BreadthFirstTraversal
                 // clean up
                 q.Dequeue();
             }
+            return result;
         }
     }
 }

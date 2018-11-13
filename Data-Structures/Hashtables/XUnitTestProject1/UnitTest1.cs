@@ -1,5 +1,4 @@
 using Hashtables;
-using System;
 using Xunit;
 
 namespace XUnitTestProject1

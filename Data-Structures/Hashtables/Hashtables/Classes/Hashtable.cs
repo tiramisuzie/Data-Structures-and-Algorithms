@@ -1,7 +1,5 @@
 ﻿using Hashtables.Classes;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Hashtables
 {
@@ -19,7 +17,7 @@ namespace Hashtables
             Table = new Node[Size];
             for (int i = 0; i < Size; i++)
             {
-                Table[i] = null;
+                Table[i] = null; // init to all null
             }
         }
 
@@ -30,8 +28,8 @@ namespace Hashtables
                 Console.WriteLine("table is at full capacity!");
                 return;
             }
+            // convert key to hashcode and make it fit in the table
             int hash = (Math.Abs(key.GetHashCode()) % Size);
-            Console.WriteLine(hash);
             while (Table[hash] != null && Table[hash].Key != key)
             {
                 hash = (hash + 1) % Size;
@@ -68,6 +66,7 @@ namespace Hashtables
             }
         }
 
+        // return true if key exist
         public bool Contains(string key)
         {
             object item = Find(key);
@@ -81,6 +80,7 @@ namespace Hashtables
             }
         }
 
+        // return hashcode which is just the array index
         public int GetHash(string key) {
             int hash = Math.Abs(key.GetHashCode()) % Size;
             while (Table[hash] != null && Table[hash].Key != key)

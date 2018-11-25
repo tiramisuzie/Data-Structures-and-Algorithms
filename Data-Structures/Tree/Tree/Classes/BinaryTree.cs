@@ -28,17 +28,20 @@ namespace Tree.Classes
         /// </summary>
         /// <param name="root">root</param>
         /// <param name="valuesInPreOrder">result is added to list</param>
-        public void PreOrder(Node root, List<int> result)
+        public List<int> PreOrder(Node node, List<int> output)
         {
-            //Base case: stop when height of node is reached
-            if (root == null)
+            output.Add(node.Value);
+
+            if (node.Left != null)
             {
-                return;
+                PreOrder(node.Left, output);
+            }
+            if (node.Right != null)
+            {
+                PreOrder(node.Right, output);
             }
 
-            result.Add(root.Value);
-            PreOrder(root.Left, result);
-            PreOrder(root.Right, result);
+            return output;
         }
 
         /// <summary>

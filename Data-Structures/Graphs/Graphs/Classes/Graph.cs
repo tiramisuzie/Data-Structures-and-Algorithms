@@ -1,32 +1,60 @@
-﻿using System;
+﻿using Graphs.Classes;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Graphs
 {
     public class Graph
     {
-        public LinkedList<LinkedList<Tuple<Node, int>>> AdjacencyList { get; set; }
-
-        public Graph()
+        public List<Node> Nodes { get; set; }
+        
+        public Graph(List<object> values)
         {
-            AdjacencyList = new LinkedList<LinkedList<Tuple<Node, int>>>();
-        }
-
-        //AddEdge
-        public void AddEdge(Node parent, Tuple<Node, int> child)
-        {
-            foreach (var item in AdjacencyList)
+            Nodes = new List<Node>();
+            foreach (object value in values)
             {
-                var node = item.First.Value.Item1;
-                var tuple = item.First.Value.Item2;
-
+                Nodes.Add(new Node(value)); // add nodes to graph
             }
         }
 
-        public void AddEdge(Node node)
+        public void AddEdge(object v1, object v2, int weight)
         {
+            Node v1Ref = Nodes.Find(x => x.Value == v1);
+            if (v1Ref == null)
+            {
+                v1Ref = new Node(v1);
+                Nodes.Add(v1Ref);
+            }
+            Node v2Ref = Nodes.Find(x => x.Value == v2);
+            if (v2Ref == null)
+            {
+                v2Ref = new Node(v2);
+                Nodes.Add(v2Ref);
+            }
+            
+            v1Ref.AdjacentNodes.Add(v2Ref, weight); // create a bridge between the nodes
+            v2Ref.AdjacentNodes.Add(v1Ref, weight);
+        }
 
+        public List<Node> GetNodes()
+        {
+            return Nodes; // return all nodes
+        }
+
+        public int Size()
+        {
+            return Nodes.Count; // return the size of graph
+        }
+
+        public Dictionary<Node, int> GetNeighbors(object value)
+        {
+            Node nodeRef = Nodes.Find(x => x.Value == value);
+
+            if (nodeRef == null)
+            {
+                return null;
+            }
+
+            return nodeRef.AdjacentNodes; // return all nodes connected to it
         }
     }
 }

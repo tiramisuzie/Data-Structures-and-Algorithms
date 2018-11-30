@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace GetEdges
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
